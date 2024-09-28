@@ -1,13 +1,14 @@
 package be.pxl.services.services;
 
-import be.pxl.services.domain.Department;
+import be.pxl.services.domain.dto.DepartmentRequest;
+import be.pxl.services.domain.dto.DepartmentResponse;
 
 import java.util.List;
 
 public interface IDepartmentService {
-    public List<Department> getAllDepartments();
-    public Department getDepartmentById(long id);
-    public Department addDepartment(Department department);
-    public Department getByOrganizationId(long organizationId);
-    public Department getByOrganizationIdWithEmployees(long organizationId);
+    List<DepartmentResponse> getAllDepartments();
+    DepartmentResponse getDepartmentById(Long id);
+    void addDepartment(DepartmentRequest departmentRequest);
+    List<DepartmentResponse> findByOrganization(Long organizationId);
+    List<DepartmentResponse> findByOrganizationWithEmployees(Long organizationId);
 }

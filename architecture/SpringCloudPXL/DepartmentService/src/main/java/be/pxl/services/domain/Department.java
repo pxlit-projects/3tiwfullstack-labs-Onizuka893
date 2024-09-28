@@ -22,7 +22,7 @@ public class Department {
     private long organizationId;
     private String name;
 
-    @OneToMany
+    @Transient
     private List<Employee> employees;
     private String position;
 

@@ -21,10 +21,11 @@ public class Organization {
     private String name;
     private String address;
 
-    @OneToMany
+    //@OneToMany(mappedBy = "organization")
+    @Transient
     private List<Employee> employees;
 
-    @OneToMany
+    //@OneToMany(mappedBy = "organization")
+    @Transient
     private List<Department> departments;
-
 }
